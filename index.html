@@ -23,12 +23,28 @@
     </script>
 </head>
 <style>
+    .road-flare-red {
+        fill: #f33d2a !important;
+    }
+
+    .desert-yellow {
+        fill: #e8f548 !important;
+    }
+
+    .purple-neon {
+        fill: #5f2a7b !important;
+    }
+
+    .blue {
+        fill: #3367d5 !important;
+    }
+
     .red {
-        fill: #ee0e26 !important;
+        fill: #bf1a20 !important;
     }
 
     .yellow {
-        fill: #ffff00 !important;
+        fill: #ffd904 !important;
     }
 
     .green {
@@ -36,7 +52,11 @@
     }
 
     .pink {
-        fill: #e692a0 !important;
+        fill: #fe6b93 !important;
+    }
+
+    .purple {
+        fill: #7202be !important;
     }
 
     .black {
@@ -49,11 +69,11 @@
 
 </style>
 
-<body class="text-sm md:text-base flex justify-center items-center flex-col md:gap-20">
-    <section class="p-5 font-bold text-xl">
+<body class="text-sm md:text-base flex justify-center items-center flex-col p-5 gap-5 md:gap-10">
+    <section class="font-bold text-xl">
         RG550 Configurator
     </section>
-    <section class="mb-10 md:mb-0 w-10/12 xl:w-1/2">
+    <section class="w-10/12">
         <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2383.87 811.36">
             <defs>
                 <style>
@@ -171,7 +191,7 @@
                     <path
                         d="M2340.36,403.92s-6.54-7.9-15.8-11.17c-9.26-3.27-21.45,1.36-21.45,1.36,0,0-3.07,9.81-4.43,13.08s8.99,13.08,8.99,13.08l-1.09,2.72,1.09,2.72-7.63,10.08,5.72,8.17,13.73-2.45v-13.08h2.35l1.63-3.81s13.88-.91,15.26-6.27c2.18-3.81,1.63-14.44,1.63-14.44Z" />
                 </g>
-                <g id="gtr-body" class="red">
+                <g id="gtr-body" class="road-flare-red">
                     <path
                         d="M2381.14,514.4s-14.89-15.62-23.25-28.52c-8.35-12.9-4.54-15.98-3.45-24.7,1.09-8.72-4-11.08-4-11.08l-345.8-106.57c.04-.05,.07-.11,.11-.16-6.05-.84-10.18,1.05-12.8,7.11-2,4.62-4.77,9.32-8.37,12.76-6.72,6.41-14.12,12.1-21.32,18.01-9.05,3.92-15.75,5.28-15.75,5.28v105.16c7.81-.36,15.31,.47,22.42,2.14,.11,.06,.22,.12,.33,.17,18.65,8.34,40.31,23.67,54.11,38.76,3.67,4.01,7.29,5.1,11.56,4.47,.02,.03,.04,.05,.04,.05,.28-.07,.55-.13,.83-.2,.49-.1,.98-.22,1.49-.35,130.64-31.21,253.77-14.71,253.77-14.71,0,0,52.31,4.36,77.01,6.54,24.7,2.18,13.08-14.17,13.08-14.17Z" />
                     <path
@@ -531,80 +551,94 @@
         </svg>
     </section>
     <section class="flex flex-col gap-5 md:gap-10">
-        <div class="flex flex-row p-2 border rounded border-solid border-slate-200">
+        <div class="flex flex-wrap flex-row p-2 border rounded border-solid border-slate-200">
             <div class="flex flex-col">
                 Body color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-red-500" onclick="handleClick('#gtr-body', 'red')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#gtr-body', 'yellow')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#gtr-body', 'black')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#gtr-body', 'white')"></div>
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#f33d2a]" onclick="handleClick('#gtr-body', 'road-flare-red')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#e8f548]" onclick="handleClick('#gtr-body', 'desert-yellow')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#5f2a7b]" onclick="handleClick('#gtr-body', 'purple-neon')"></div>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col sm:flex-row gap-5 md:gap-10 p-2 border rounded border-solid border-slate-200">
-            <div class="flex flex-col">
+        <div class="flex flex-wrap flex-col sm:flex-row gap-5 md:gap-10 p-2 border rounded border-solid border-slate-200">
+            <div class="flex flex-col flex-1">
                 PU Bridge color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#pu-bridge', 'yellow')">
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#pu-bridge', 'yellow')">
                     </div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#pu-bridge', 'pink')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#pu-bridge', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#pu-bridge', 'green')">
                     </div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#7202be]" onclick="handleClick('#pu-bridge', 'purple')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#pu-bridge', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#pu-bridge', 'red')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#pu-bridge', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#pu-bridge', 'white')"></div>
                 </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col flex-1">
                 PU Middle color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#pu-middle', 'yellow')">
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#pu-middle', 'yellow')">
                     </div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#pu-middle', 'pink')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#pu-middle', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#pu-middle', 'green')">
                     </div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#7202be]" onclick="handleClick('#pu-middle', 'purple')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#pu-middle', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#pu-middle', 'red')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#pu-middle', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#pu-middle', 'white')"></div>
                 </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col flex-1">
                 PU Neck color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#pu-neck', 'yellow')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#pu-neck', 'pink')"></div>
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#pu-neck', 'yellow')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#pu-neck', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#pu-neck', 'green')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#7202be]" onclick="handleClick('#pu-neck', 'purple')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#pu-neck', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#pu-neck', 'red')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#pu-neck', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#pu-neck', 'white')"></div>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col sm:flex-row gap-5 md:gap-10 p-2 border rounded border-solid border-slate-200">
-            <div class="flex flex-col">
+        <div class="flex flex-wrap flex-col sm:flex-row gap-5 md:gap-10 p-2 border rounded border-solid border-slate-200">
+            <div class="flex flex-col flex-1">
                 Volume Knob color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#volume', 'yellow')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#volume', 'pink')"></div>
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#volume', 'yellow')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#volume', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#volume', 'green')"></div>
+                    <!-- <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#volume', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#volume', 'red')"></div> -->
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#volume', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#volume', 'white')"></div>
                 </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col flex-1">
                 Tone Knob color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#tone', 'yellow')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#tone', 'pink')"></div>
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#tone', 'yellow')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#tone', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#tone', 'green')"></div>
+                    <!-- <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#tone', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#tone', 'red')"></div> -->
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#tone', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#tone', 'white')"></div>
                 </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col flex-1">
                 PU Switch color
-                <div class="flex flex-row gap-2">
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffff00]" onclick="handleClick('#switch', 'yellow')"></div>
-                    <div class="block rounded border w-[40px] h-[25px] bg-[#e692a0]" onclick="handleClick('#switch', 'pink')"></div>
+                <div class="flex flex-wrap flex-row gap-2">
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#ffd904]" onclick="handleClick('#switch', 'yellow')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#fe6b93]" onclick="handleClick('#switch', 'pink')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#0ddb0d]" onclick="handleClick('#switch', 'green')"></div>
+                    <!-- <div class="block rounded border w-[40px] h-[25px] bg-[#3367d5]" onclick="handleClick('#switch', 'blue')"></div>
+                    <div class="block rounded border w-[40px] h-[25px] bg-[#bf1a20]" onclick="handleClick('#switch', 'red')"></div> -->
                     <div class="block rounded border w-[40px] h-[25px] bg-[#000]" onclick="handleClick('#switch', 'black')"></div>
                     <div class="block rounded border w-[40px] h-[25px] bg-[#FFF]" onclick="handleClick('#switch', 'white')"></div>
                 </div>
